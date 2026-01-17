@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,9 +89,9 @@
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
     
     <!-- Preload Critical Assets -->
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="script.js" as="script">
-    <link rel="preload" href="images/DF130B01-435B-4533-AC15-13A2F3391CDE.jpeg" as="image" fetchpriority="high">
+    <link rel="preload" href="{% static 'styles.css' %}" as="style">
+    <link rel="preload" href="{% static 'script.js' %}" as="script">
+    <link rel="preload" href="{% static 'images/DF130B01-435B-4533-AC15-13A2F3391CDE.jpeg' %}" as="image" fetchpriority="high">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -110,14 +112,14 @@
     <meta property="twitter:site" content="@pravoo">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="images/pravoo-logo-icon.svg">
+    <link rel="icon" type="image/svg+xml" href="{% static 'images/pravoo-logo-icon.svg' %}">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/pravoo-logo-simple.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/pravoo-logo-simple.svg' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -541,7 +543,7 @@
 <body>
     <!-- Splash Screen -->
     <div class="splash-screen" id="splashScreen">
-        <img src="images/DF130B01-435B-4533-AC15-13A2F3391CDE.jpeg" alt="Pravoo Logo" class="splash-logo" fetchpriority="high">
+        <img src="{% static 'images/DF130B01-435B-4533-AC15-13A2F3391CDE.jpeg' %}" alt="Pravoo Logo" class="splash-logo" fetchpriority="high">
     </div>
     
     <!-- Skip to Main Content Link for Accessibility -->
@@ -553,7 +555,7 @@
         <div class="container">
             <div class="nav-wrapper">
                 <a href="#home" class="logo" aria-label="Pravoo - Home">
-                    <img src="images/DF130B01-435B-4533-AC15-13A2F3391CDE.jpeg" alt="Pravoo Logo" class="logo-icon" loading="eager" fetchpriority="high">
+                    <img src="{% static 'images/DF130B01-435B-4533-AC15-13A2F3391CDE.jpeg' %}" alt="Pravoo Logo" class="logo-icon" loading="eager" fetchpriority="high">
                     <span class="logo-text">Pravoo</span>
                 </a>
                 <ul class="nav-menu" id="navMenu" role="menubar">
@@ -709,7 +711,7 @@
                         <div class="team-card">
                             <div class="team-card-inner">
                                 <div class="team-avatar">
-                                    <img src="images/mukteshreddy.jpeg" alt="Muktesh Reddy Vangala - Founder & CEO of Pravoo IT Solutions" loading="lazy">
+                                    <img src="{% static 'images/mukteshreddy.jpeg' %}" alt="Muktesh Reddy Vangala - Founder & CEO of Pravoo IT Solutions" loading="lazy">
                                 </div>
                                 <div class="team-info">
                                     <h3 class="team-name">Muktesh Reddy Vangala</h3>
@@ -1005,7 +1007,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <img src="images/email-chat-support.png" alt="Email & Chat Support Icon" style="width: 100%; height: 100%; object-fit: contain;">
+                        <img src="{% static 'images/email-chat-support.png' %}" alt="Email & Chat Support Icon" style="width: 100%; height: 100%; object-fit: contain;">
                     </div>
                     <h3 class="feature-title">Email & Chat Support</h3>
                     <p class="feature-description">
@@ -1217,7 +1219,7 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <div class="logo">
-                        <img src="images/DF130B01-435B-4533-AC15-13A2F3391CDE.jpeg" alt="Pravoo Logo" class="logo-icon" loading="eager" fetchpriority="high">
+                        <img src="{% static 'images/DF130B01-435B-4533-AC15-13A2F3391CDE.jpeg' %}" alt="Pravoo Logo" class="logo-icon" loading="eager" fetchpriority="high">
                         <span class="logo-text">Pravoo</span>
                     </div>
                     <p class="footer-description">
@@ -1270,7 +1272,7 @@
         </nav>
     </div>
 
-    <script src="script.js" defer></script>
+    <script src="{% static 'script.js' %}" defer></script>
 </body>
 </html>
 
