@@ -17,8 +17,8 @@ def home(request):
     return render(request, "index.html")
 
 def favicon(request):
-    logo_path = os.path.join(settings.BASE_DIR, 'static', 'images', 'DF130B01-435B-4533-AC15-13A2F3391CDE.jpeg')
-    return FileResponse(open(logo_path, 'rb'), content_type='image/jpeg')
+    logo_path = os.path.join(settings.BASE_DIR, 'static', 'images', 'pravoo-logo.png')
+    return FileResponse(open(logo_path, 'rb'), content_type='image/png')
 
 def catch_all(request, path=''):
     return redirect('/', permanent=False)
